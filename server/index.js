@@ -23,10 +23,6 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log("DB에러남", err));
 
-app.get("/", (req, res) => {
-  res.send("Hello gdgdgd");
-});
-
 app.post("/api/users/signup", (req, res) => {
   //클라이언트에서 보내주는 회원가입 정보를 가져오면 그것들 DB에 넣어준다.
   const user = new User(req.body);
